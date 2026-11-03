@@ -1,19 +1,62 @@
-# React + Vite
+# Ajosh Varghese — .NET Backend Developer Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Modern, high-performance portfolio for **Ajosh Varghese**, .NET Backend Developer specializing in C#, ASP.NET Core REST APIs, MySQL, and business process automation. Built with React (Vite) and styled with a luxury Obsidian & Champagne Gold aesthetic.
 
-Currently, two official plugins are available:
+- **Portfolio URL:** [ajoshvarghese.in](https://ajoshvarghese.in) (and [ajosh-portfolio.vercel.app](https://ajosh-portfolio.vercel.app))
+- **GitHub:** [github.com/ajoshvarghese94](https://github.com/ajoshvarghese94)
+- **LinkedIn:** [linkedin.com/in/ajoshvarghese](https://linkedin.com/in/ajoshvarghese)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 💎 Features & Architecture
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+- **Primary Backend Specialization:** Clear, immediate positioning across the hero, about narrative, skills bento grid, and solutions catalog focusing on C#, ASP.NET Core, REST APIs, and MySQL.
+- **Dedicated "What I Build" Section:** 4 structured solution pillars (Real Estate Data Management, Data Entry & Delivery Platforms, Automation & Scheduling, Internal Business Applications) with explicit technology badges.
+- **Secondary Desktop Positioning:** Windows Forms & desktop tooling designated as a secondary support capability without diluting core backend identity.
+- **Prominent Social Links:** Direct GitHub and LinkedIn links in the Hero and Contact sections, opening securely in new tabs (`target="_blank" rel="noopener noreferrer"`).
+- **Mobile-First & Ultra-Responsive:** Tested from 320px to 1920px+ with zero horizontal overflow, fluid typography (`clamp()`), notch support (`viewport-fit=cover`), and minimum 44px touch targets.
+- **Accessible Mobile Navigation Drawer:** Accessible hamburger menu with focus trap, `Escape` key close, `aria-expanded`, and body scroll lock.
+- **Lighthouse 95+ Performance:** Preconnected Google Fonts (Instrument Serif + DM Sans + JetBrains Mono), no render-blocking `@import`, high-priority LCP hero portrait, and WCAG AA contrast.
+- **SEO & Social Cards:** Comprehensive Open Graph, Twitter Cards, canonical URL, custom black & gold SVG favicon, and Schema.org `Person` JSON-LD structured data.
 
-Note: This will impact Vite dev & build performances.
-You can also try [the experimental native React Compiler support in plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md#rust-react-compiler) by using `compiler: true` in the plugin options instead of using the Babel plugin.
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Configuration & Content Customization
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+All personal content and profile settings reside in [`src/data/portfolioData.js`](src/data/portfolioData.js):
+
+- **Social Links:** Configured with your GitHub (`https://github.com/ajoshvarghese94`) and LinkedIn (`https://linkedin.com/in/ajoshvarghese`).
+- **Resume Download:** Drop your resume in `public/resume.pdf` and set `resume.enabled: true` in `portfolioConfig`.
+- **Experience Trajectory:** Update company names or milestones in `experienceData`.
+
+---
+
+## 🚀 Running Locally
+
+```bash
+# Install dependencies
+npm install
+
+# Start Vite local development server
+npm run dev
+
+# Run ESLint validation
+npm run lint
+
+# Build production bundle
+npm run build
+
+# Preview production build locally
+npm run preview
+```
+
+---
+
+## 🌐 Deploying to Vercel
+
+Pushing to `main` triggers automatic deployment to [ajoshvarghese.in](https://ajoshvarghese.in):
+```bash
+git add .
+git commit -m "feat: enhance portfolio with .NET backend focus, social links, and What I Build section"
+git push origin main
+```
