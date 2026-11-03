@@ -22,7 +22,7 @@ export const portfolioConfig = {
   // Social & Professional Links
   social: {
     github: "https://github.com/ajoshvarghese94",
-    linkedin: "https://linkedin.com/in/ajoshvarghese",
+    linkedin: "https://www.linkedin.com/in/ajosh-varghese-87576917b/",
   },
 
   // Resume Configuration

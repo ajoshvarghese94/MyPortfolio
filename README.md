@@ -4,7 +4,7 @@ Modern, high-performance portfolio for **Ajosh Varghese**, .NET Backend Develope
 
 - **Portfolio URL:** [ajoshvarghese.in](https://ajoshvarghese.in) (and [ajosh-portfolio.vercel.app](https://ajosh-portfolio.vercel.app))
 - **GitHub:** [github.com/ajoshvarghese94](https://github.com/ajoshvarghese94)
-- **LinkedIn:** [linkedin.com/in/ajoshvarghese](https://linkedin.com/in/ajoshvarghese)
+- **LinkedIn:** [linkedin.com/in/ajosh-varghese-87576917b](https://www.linkedin.com/in/ajosh-varghese-87576917b/)
 
 ---
 
