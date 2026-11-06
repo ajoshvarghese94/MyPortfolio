@@ -1,62 +1,99 @@
-# Ajosh Varghese — .NET Backend Developer Portfolio
+# Ajosh Varghese – Portfolio Website
 
-Modern, high-performance portfolio for **Ajosh Varghese**, .NET Backend Developer specializing in C#, ASP.NET Core REST APIs, MySQL, and business process automation. Built with React (Vite) and styled with a luxury Obsidian & Champagne Gold aesthetic.
+DevOps & Networking Machine Test 03: DNS, HTTP, HTTPS and Custom Domain Deployment.
 
-- **Portfolio URL:** [ajoshvarghese.in](https://ajoshvarghese.in) (and [ajosh-portfolio.vercel.app](https://ajosh-portfolio.vercel.app))
-- **GitHub:** [github.com/ajoshvarghese94](https://github.com/ajoshvarghese94)
-- **LinkedIn:** [linkedin.com/in/ajosh-varghese-87576917b](https://www.linkedin.com/in/ajosh-varghese-87576917b/)
+## Student and project details
 
----
+| Item | Details |
+|---|---|
+| Student name | Ajosh Varghese |
+| Batch | `<09:15 - 10:15 pm>` |
+| Domain name | `ajoshvarghese.in` |
+| Hosting platform | Vercel |
+| Live website URL (Vercel) | https://ajosh-portfolio.vercel.app |
+| Custom domain URL | https://ajoshvarghese.in |
+| GitHub repository URL | https://github.com/ajoshvarghese94/MyPortfolio |
+| Domain provider | GoDaddy |
 
-## 💎 Features & Architecture
+## About the project
 
-- **Primary Backend Specialization:** Clear, immediate positioning across the hero, about narrative, skills bento grid, and solutions catalog focusing on C#, ASP.NET Core, REST APIs, and MySQL.
-- **Dedicated "What I Build" Section:** 4 structured solution pillars (Real Estate Data Management, Data Entry & Delivery Platforms, Automation & Scheduling, Internal Business Applications) with explicit technology badges.
-- **Secondary Desktop Positioning:** Windows Forms & desktop tooling designated as a secondary support capability without diluting core backend identity.
-- **Prominent Social Links:** Direct GitHub and LinkedIn links in the Hero and Contact sections, opening securely in new tabs (`target="_blank" rel="noopener noreferrer"`).
-- **Mobile-First & Ultra-Responsive:** Tested from 320px to 1920px+ with zero horizontal overflow, fluid typography (`clamp()`), notch support (`viewport-fit=cover`), and minimum 44px touch targets.
-- **Accessible Mobile Navigation Drawer:** Accessible hamburger menu with focus trap, `Escape` key close, `aria-expanded`, and body scroll lock.
-- **Lighthouse 95+ Performance:** Preconnected Google Fonts (Instrument Serif + DM Sans + JetBrains Mono), no render-blocking `@import`, high-priority LCP hero portrait, and WCAG AA contrast.
-- **SEO & Social Cards:** Comprehensive Open Graph, Twitter Cards, canonical URL, custom black & gold SVG favicon, and Schema.org `Person` JSON-LD structured data.
+A responsive personal portfolio built with **React (Vite)**. Sections: **Home, About Me, Skills, Projects, Contact**. It is deployed on **Vercel** from the `main` branch and published on a custom `.in` domain with HTTPS.
 
----
-
-## 🛠️ Configuration & Content Customization
-
-All personal content and profile settings reside in [`src/data/portfolioData.js`](src/data/portfolioData.js):
-
-- **Social Links:** Configured with your GitHub (`https://github.com/ajoshvarghese94`) and LinkedIn (`https://linkedin.com/in/ajoshvarghese`).
-- **Resume Download:** Drop your resume in `public/resume.pdf` and set `resume.enabled: true` in `portfolioConfig`.
-- **Experience Trajectory:** Update company names or milestones in `experienceData`.
-
----
-
-## 🚀 Running Locally
+## Run locally
 
 ```bash
-# Install dependencies
 npm install
-
-# Start Vite local development server
-npm run dev
-
-# Run ESLint validation
-npm run lint
-
-# Build production bundle
-npm run build
-
-# Preview production build locally
-npm run preview
+npm run dev      # development
+npm run build    # production build
 ```
 
----
+## DNS configuration summary
 
-## 🌐 Deploying to Vercel
+| Type | Name | Value | Purpose |
+|---|---|---|---|
+| A | `@` | `216.198.79.1` | Root domain `ajoshvarghese.in` points to Vercel |
+| CNAME | `www` | `cname.vercel-dns.com` | `www.ajoshvarghese.in` points to Vercel |
+| NS | `@` | GoDaddy default nameservers (`ns..domaincontrol.com`) | Where the DNS records are hosted |
 
-Pushing to `main` triggers automatic deployment to [ajoshvarghese.in](https://ajoshvarghese.in):
-```bash
-git add .
-git commit -m "feat: enhance portfolio with .NET backend focus, social links, and What I Build section"
-git push origin main
-```
+Vercel redirects the root domain to `www` (308 permanent redirect), so both addresses open the website. HTTPS certificates are issued and renewed automatically by Vercel.
+
+## Task checklist
+
+| # | Task | Status |
+|---|---|---|
+| 1 | Create the website (Home, About, Skills, Projects, Contact) | Done |
+| 2 | Deploy on Vercel | Done |
+| 3 | Purchase a custom domain (GoDaddy) | Done |
+| 4 | Configure DNS (root and www) | `<tick when Vercel shows green ticks>` |
+| 5 | Enable and verify HTTPS | `<tick after the padlock shows>` |
+| 6 | DNS verification (nslookup, dig, curl) | `<paste outputs below>` |
+| 7 | Request-flow diagram | Done: [docs/website-flow.md](docs/website-flow.md) |
+| 8 | DNS concepts documentation | Done: [docs/dns-concepts.md](docs/dns-concepts.md) |
+
+## Task 6: DNS verification
+
+Replace each block with your real terminal output.
+
+### nslookup
+nslookup ajoshvarghese.in
+**Screenshot:** ![Task](docs/screenshots/06-nslookup.png)
+
+### dig
+dig ajoshvarghese.in
+**Screenshot:** ![Task](docs/screenshots/07-dig.png)
+
+### curl
+curl -I https://ajoshvarghese.in
+**Screenshot:** ![Task](docs/screenshots/08-curl.png)
+
+
+**What to look for:** `nslookup` and `dig` should return the A record `216.198.79.1` (or the address Vercel shows). `curl -I` should return a `200` response, or a `308` redirect to `https://www.ajoshvarghese.in` followed by `200` there.
+
+## Screenshots
+
+| Required screenshot | File |
+|---|---|
+| Website running | `docs/screenshots/01-website-running.png` |
+| Deployment dashboard | `docs/screenshots/02-deployment-dashboard.png` |
+| Domain purchase details | `docs/screenshots/03-domain-purchase.png` |
+| DNS records configuration | `docs/screenshots/04-dns-records.png` |
+| HTTPS lock icon | `docs/screenshots/05-https-lock.png` |
+| nslookup output | `docs/screenshots/06-nslookup.png` |
+| dig output | `docs/screenshots/07-dig.png` |
+| curl output | `docs/screenshots/08-curl.png` |
+| DNS verification success (Vercel green ticks) | `docs/screenshots/09-dns-verification-success.png` |
+
+![Website running](docs/screenshots/01-website-running.png)
+![Deployment dashboard](docs/screenshots/02-deployment-dashboard.png)
+![Domain purchase](docs/screenshots/03-domain-purchase.png)
+![DNS records](docs/screenshots/04-dns-records.png)
+![HTTPS lock](docs/screenshots/05-https-lock.png)
+![nslookup](docs/screenshots/06-nslookup.png)
+![dig](docs/screenshots/07-dig.png)
+![curl](docs/screenshots/08-curl.png)
+![DNS verification success](docs/screenshots/09-dns-verification-success.png)
+
+## Documentation
+
+- [Website request flow (Task 7)](docs/website-flow.md)
+- [DNS, HTTP and HTTPS concepts (Task 8)](docs/dns-concepts.md)
